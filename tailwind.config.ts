@@ -22,12 +22,15 @@ module.exports = {
         ring: "hsl(var(--ring))",
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
+        bgColor:{
+          DEFAULT: "#FFFFFF"
+        },
         primary: {
-          DEFAULT: "hsl(var(--primary))",
+          DEFAULT: "#1B1B1B",
           foreground: "hsl(var(--primary-foreground))",
         },
         secondary: {
-          DEFAULT: "hsl(var(--secondary))",
+          DEFAULT: "#3E54D3",
           foreground: "hsl(var(--secondary-foreground))",
         },
         destructive: {
@@ -39,7 +42,7 @@ module.exports = {
           foreground: "hsl(var(--muted-foreground))",
         },
         accent: {
-          DEFAULT: "hsl(var(--accent))",
+          DEFAULT: "#15CDCA ",
           foreground: "hsl(var(--accent-foreground))",
         },
         popover: {
@@ -50,6 +53,9 @@ module.exports = {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
+      },
+      fontFamily: {
+        roboto:["var(--font-roboto)"],
       },
       borderRadius: {
         lg: "var(--radius)",
