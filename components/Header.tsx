@@ -20,34 +20,31 @@ const routes =[
 ]
 const Header = () => {
   return (
-    <header className='sm:flex sm:justify-between py-3 px-4 border-b'>
+    <header className='sm:flex sm:justify-between py-3 px-4 border-b bg-secondary/75'>
       <Container>
-          <div className='flex justify-between'>
+          <div className='flex flex-row items-center gap-10'>
             {/* image and logo div */}
-            <div>
-              StoreName 
+            <div className='font-roboto basis-2/12'>
+              <h1 className='font-roboto text-4xl text-bgColor'>SpinCity</h1> 
             </div>
             {/* search bar div*/}
-            <div>
-              <div className="flex w-full max-w-sm items-center space-x-2">
-                <Input type="email" placeholder="Email" />
-                <Button type="submit">Subscribe</Button>
-              </div>
+            <div className='basis-7/12'>
+                <Input type="text" placeholder="" />
             </div>
             {/* Genre dropdown*/}
-            <div>
+            <div className='basis-2/12'>
               <GenreDropdown/>
             </div>
             {/* shopping cart */}
-            <div>
+            <div className='basis-2/12'>
               <Button
               variant="ghost"
               size="icon">
-                <ShoppingCart/>
+                <ShoppingCart color='white'/>
               </Button>
             </div>
             {/* Avatar Dropdown  */}
-            <div>
+            <div className='basis-2/12'>
               <AvatarButton/>
             </div>
             

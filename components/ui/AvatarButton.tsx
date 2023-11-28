@@ -17,19 +17,19 @@ import { Avatar, AvatarFallback, AvatarImage } from '@radix-ui/react-avatar'
 const AvatarButton = () => {
   return (
     <DropdownMenu>
-      <DropdownMenuTrigger>
+      <DropdownMenuTrigger className=''>
         <Avatar>
           <AvatarImage></AvatarImage>
-          <AvatarFallback>ES</AvatarFallback>
+          <AvatarFallback className='text-bgColor'>ES</AvatarFallback>
         </Avatar>
       </DropdownMenuTrigger>
-      <DropdownMenuContent>
-        <DropdownMenuLabel>Account</DropdownMenuLabel>
-        <DropdownMenuSeparator/>
-        <DropdownMenuItem>
+      <DropdownMenuContent className=' border rounded-2xl w-56 mt-8 p-4'>
+      <DropdownMenuLabel className='font-roboto text-lg' >Account</DropdownMenuLabel>
+        <DropdownMenuSeparator className='border-b border-black' />
+        <DropdownMenuItem className='mr-2 h-4 w-4 font-roboto text-lg'>
           Login
         </DropdownMenuItem>
-        <DropdownMenuItem>
+        <DropdownMenuItem className='mr-2 h-4 w-4 font-roboto text-lg mt-2'>
           Logout
         </DropdownMenuItem>
       </DropdownMenuContent>
