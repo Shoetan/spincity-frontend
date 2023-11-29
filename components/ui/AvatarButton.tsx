@@ -26,10 +26,10 @@ const AvatarButton = () => {
       <DropdownMenuContent className=' border rounded-2xl w-56 mt-8 p-4'>
       <DropdownMenuLabel className='font-roboto text-lg' >Account</DropdownMenuLabel>
         <DropdownMenuSeparator className='border-b border-black' />
-        <DropdownMenuItem className='mr-2 h-4 w-4 font-roboto text-lg'>
+        <DropdownMenuItem className='mr-2 h-4 w-4 font-roboto text-lg cursor-pointer'>
           Login
         </DropdownMenuItem>
-        <DropdownMenuItem className='mr-2 h-4 w-4 font-roboto text-lg mt-2'>
+        <DropdownMenuItem className='mr-2 h-4 w-4 font-roboto text-lg mt-2 cursor-pointer'>
           Logout
         </DropdownMenuItem>
       </DropdownMenuContent>
