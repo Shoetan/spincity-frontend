@@ -1,6 +1,7 @@
 import './globals.css'
 import type { Metadata } from 'next'
 import { Roboto } from 'next/font/google'
+import TanstackProvider from '@/components/providers/TansackProvider'
 
 
 const roboto = Roboto ({
@@ -20,8 +21,14 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className={`${roboto.variable}`} >
-      <body className="bg-bgColor" >{children}</body>
+    <html lang="en" className="" >
+      <TanstackProvider>
+          <body className={`${roboto.variable}`} >
+            <main>
+              {children}    
+            </main>
+          </body>
+      </TanstackProvider>
     </html>
   )
 }

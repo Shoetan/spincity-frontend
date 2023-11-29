@@ -40,7 +40,9 @@ const Header = () => {
               <Button
               variant="ghost"
               size="icon">
-                <ShoppingCart color='white'/>
+                <div>
+                  <ShoppingCart color='white'/>
+                </div>
               </Button>
             </div>
             {/* Avatar Dropdown  */}
