@@ -1,7 +1,7 @@
 import axios from "axios";
 
-const instacnce = axios.create ({
+const instance = axios.create ({
   baseURL: process.env.NEXT_PUBLIC_API_BASE_URL
 })
 
-export default instacnce
+export default instance
