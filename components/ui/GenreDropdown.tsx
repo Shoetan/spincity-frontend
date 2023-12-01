@@ -13,6 +13,7 @@ import {
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu"
 import { ListItem } from './ListItem';
+import { useGetGenreQuery } from '../queries/queries';
 
 
 
@@ -67,6 +68,9 @@ const components: { title: string; href: string; description: string }[] = [
 ]
 
 const GenreDropdown = () => {
+
+  const {genreData, isLoading} = useGetGenreQuery()
+
   return (
     <NavigationMenu>
       <NavigationMenuList>
@@ -74,13 +78,13 @@ const GenreDropdown = () => {
           <NavigationMenuTrigger className='font-roboto text-lg'>Genres</NavigationMenuTrigger>
           <NavigationMenuContent>
             <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
-              {components.map((component) => (
+              {genreData?.genre?.map((genre: any) => (
                 <ListItem
-                  key={component.title}
-                  title={component.title}
-                  href={component.href}
+                  key={genre.title}
+                  title={genre.title}
+                  href={genre.href}
                 >
-                  {component.description}
+                  {genre.description}
                 </ListItem>
               ))}
             </ul>
