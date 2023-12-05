@@ -42,11 +42,11 @@ module.exports = {
           foreground: "hsl(var(--muted-foreground))",
         },
         accent: {
-          DEFAULT: "#15CDCA ",
+          DEFAULT: "#2C41A3",
           foreground: "hsl(var(--accent-foreground))",
         },
         popover: {
-          DEFAULT: "hsl(var(--popover))",
+          DEFAULT: "#D14C9E",
           foreground: "hsl(var(--popover-foreground))",
         },
         card: {
@@ -56,6 +56,7 @@ module.exports = {
       },
       fontFamily: {
         roboto:["var(--font-roboto)"],
+        poppins:["var(--font-poppins)"],
       },
       borderRadius: {
         lg: "var(--radius)",

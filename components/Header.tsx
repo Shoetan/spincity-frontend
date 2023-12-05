@@ -25,7 +25,7 @@ const Header = () => {
           <div className='flex flex-row items-center gap-10'>
             {/* image and logo div */}
             <div className='font-roboto basis-2/12'>
-              <h1 className='font-roboto text-4xl text-bgColor'>SpinCity</h1> 
+              <h1 className='font-poppins text-4xl text-bgColor'>SpinCity</h1> 
             </div>
             {/* search bar div*/}
             <div className='basis-7/12'>
