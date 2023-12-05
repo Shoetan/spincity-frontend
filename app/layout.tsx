@@ -1,12 +1,19 @@
 import './globals.css'
 import type { Metadata } from 'next'
 import { Roboto } from 'next/font/google'
+import { Poppins } from 'next/font/google'
 import TanstackProvider from '@/components/providers/TansackProvider'
 
 
 const roboto = Roboto ({
   subsets: ['latin'],
   variable: "--font-roboto",
+  weight: ["100", "300","400", "500"]
+})
+
+const poppins = Poppins ({
+  subsets: ['latin'],
+  variable: "--font-poppins",
   weight: ["100", "300","400", "500"]
 })
 
@@ -23,7 +30,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="" >
       <TanstackProvider>
-          <body className={`${roboto.variable}`} >
+          <body className={`${poppins.variable}`} >
             <main>
               {children}    
             </main>
