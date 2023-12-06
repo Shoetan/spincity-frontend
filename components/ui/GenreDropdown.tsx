@@ -26,8 +26,8 @@ const GenreDropdown = () => {
       <NavigationMenuList>
         <NavigationMenuItem>
           <NavigationMenuTrigger className='font-poppins text-lg'>Genres</NavigationMenuTrigger>
-          <NavigationMenuContent>
-            <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
+          <NavigationMenuContent className=''>
+            <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px]">
               {genreData?.genre?.map((genre: GenreType) => (
                 <ListItem
                   key={genre.title}

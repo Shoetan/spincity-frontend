@@ -9,15 +9,11 @@ import { Input } from './ui/input'
 import GenreDropdown from './ui/GenreDropdown'
 import AvatarButton from './ui/AvatarButton'
 import { ShoppingCart } from 'lucide-react'
+import Image from 'next/image'
+import spincity from '../public/spincity.png'
 
 
 
-const routes =[
-  {
-    "href": "/",
-    "label": ""
-  }
-]
 const Header = () => {
   return (
     <header className='sm:flex sm:justify-between py-3 px-4 border-b bg-secondary/75'>
@@ -25,7 +21,12 @@ const Header = () => {
           <div className='flex flex-row items-center gap-10'>
             {/* image and logo div */}
             <div className='font-roboto basis-2/12'>
-              <h1 className='font-poppins text-4xl text-bgColor'>SpinCity</h1> 
+              {/* <h1 className='font-poppins text-4xl text-bgColor'>SpinCity</h1> */} 
+              <Image 
+              src={spincity} 
+              alt={'logo of business'}
+              width={45}
+              />
             </div>
             {/* search bar div*/}
             <div className='basis-7/12'>
