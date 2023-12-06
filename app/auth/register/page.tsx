@@ -30,7 +30,7 @@ const page = () => {
           </Button>
 
           <div className='font-poppins'>
-            <p>Already have and account? <span className='text-accent text-lg cursor-pointer hover:text-popover'>Sign in</span></p>
+            <p>Already have and account? <span className='text-accent text-lg cursor-pointer hover:text-purple-400'>Sign in</span></p>
           </div>
         </div>
         
