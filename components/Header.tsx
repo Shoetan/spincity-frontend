@@ -10,7 +10,7 @@ import GenreDropdown from './ui/GenreDropdown'
 import AvatarButton from './ui/AvatarButton'
 import { ShoppingCart } from 'lucide-react'
 import Image from 'next/image'
-import spincity from '../public/spincity.png'
+import spincityWhite from '../public/spincityWhite.png'
 
 
 
@@ -21,11 +21,10 @@ const Header = () => {
           <div className='flex flex-row items-center gap-10'>
             {/* image and logo div */}
             <div className='font-roboto basis-2/12'>
-              {/* <h1 className='font-poppins text-4xl text-bgColor'>SpinCity</h1> */} 
               <Image 
-              src={spincity} 
+              src={spincityWhite} 
               alt={'logo of business'}
-              width={45}
+              width={30}
               />
             </div>
             {/* search bar div*/}
