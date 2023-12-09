@@ -46,7 +46,7 @@ module.exports = {
           foreground: "hsl(var(--accent-foreground))",
         },
         popover: {
-          DEFAULT: "#D14C9E",
+          
           foreground: "hsl(var(--popover-foreground))",
         },
         card: {
