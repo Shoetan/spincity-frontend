@@ -1,7 +1,7 @@
 import instance from "@/app/api/apiInstance";
-import { MutationFunction, useMutation } from "@tanstack/react-query";
+import { useMutation } from "@tanstack/react-query";
 import { RegisterUserResponse, RegisterUserType } from "../authTypes";
-import { register } from "module";
+import React from "react";
 
 
 
@@ -10,22 +10,21 @@ const registerUser = async(payload: RegisterUserType):Promise<RegisterUserRespon
 
   const {data} = response;
   return data
-
 }
 
-const printMessage = () =>{
-  console.log("Hello");
-}
+
+
 
 export const userRegistration = () =>{
+
   
   // eslint-disable-next-line react-hooks/rules-of-hooks
-  const {mutate} = useMutation({
+  const {mutate, isPending} = useMutation({
     mutationFn:(payload:RegisterUserType) =>{
       return registerUser(payload)
     }
   })
 
-  return {createUser: mutate}
+  return {createUser: mutate, creatingUser:isPending}
 }
 
