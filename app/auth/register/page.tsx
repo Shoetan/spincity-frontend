@@ -10,6 +10,7 @@ import { useForm } from 'react-hook-form'
 import { userRegistration } from '../queries/authqueries'
 import { zodResolver } from "@hookform/resolvers/zod"
 import { RegistrationSchema, registerSchema } from '../validation'
+import { Loader2 } from 'lucide-react'
 
 type IRegisterPayload = {
   name: string;
@@ -29,17 +30,10 @@ const Page = () => {
     resolver: zodResolver(registerSchema),
   })
 
-
-
-  const {createUser} = userRegistration()
-
+// create register use function fron react query
+  const {createUser, creatingUser} = userRegistration()
 
   const onSubmit = async (payload:IRegisterPayload) =>{
-
-
-
-    console.log(payload);
-
     await createUser(payload)
   }
 
@@ -61,23 +55,26 @@ const Page = () => {
             
             <div className='flex flex-col w-full h-16 mb-6'>
               <label className='font-poppins'>Your name</label>
-              <input type='text' className='border w-full h-full rounded-lg p-3' {...register("name")}/>  
+              <input type='text' className='border w-full h-full rounded-lg p-3' {...register("name")}/> 
+              {errors.name && ( <p className='font-roboto text-xs text-red-500'>{errors.name?.message}</p>)} 
             </div>
             <div className='flex flex-col w-full h-16 mb-6'>
               <label className='font-poppins'>Email</label>
-              <input type='email' className='border w-full h-full rounded-lg p-3' {...register("email")}  />  
+              <input type='email' className='border w-full h-full rounded-lg p-3' {...register("email")}  /> 
+              {errors.email && ( <p className="font-poppins text-xs text-red-500"> {errors.email?.message}</p>)} 
             </div>
             <div className='flex flex-col w-full h-16 mb-6'>
               <label className='font-poppins'>Password</label>
               <input type='text' className='border w-full h-full rounded-lg p-3' {...register("password")} />  
-              {errors.password && ( <p>{errors.password?.message}</p>)}
+              {errors.password && ( <p className="font-poppins text-xs text-red-500" >{errors.password?.message}</p>)}
             </div>
             <div className='flex flex-col w-full h-16 mb-6'>
               <label className='font-poppins'>Re-enter password</label>
-              <input type='text' className='border w-full h-full rounded-lg p-3' {...register("confirm_password")} />  
+              <input type='text' className='border w-full h-full rounded-lg p-3' {...register("confirm_password")} />
+              {errors.password && ( <p className="font-poppins text-xs text-red-500" >{errors.password?.message}</p>)}
             </div>
             <Button variant="secondary" size="full" className='mb-6' onClick={ handleSubmit(onSubmit) } >
-              Continue
+              {creatingUser ? (<Loader2 className='className="mr-2 h-4 w-4 animate-spin'/>) : ("Continue")}
             </Button>
 
             <div className='font-poppins'>
