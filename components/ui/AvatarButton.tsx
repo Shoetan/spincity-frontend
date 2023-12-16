@@ -33,7 +33,7 @@ const AvatarButton = () => {
         <DropdownMenuItem className='mr-2 h-4 w-4 font-poppins text-lg cursor-pointer' onClick={()=> {router.push("/auth/register")}   }>
           Register
         </DropdownMenuItem>
-        <DropdownMenuItem className='mr-2 h-4 w-4 font-poppins text-lg mt-2 cursor-pointer'>
+        <DropdownMenuItem className='mr-2 h-4 w-4 font-poppins text-lg mt-2 cursor-pointer' onClick={()=>router.push("/auth/login")}>
           Signin
         </DropdownMenuItem>
       </DropdownMenuContent>

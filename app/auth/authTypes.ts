@@ -19,3 +19,13 @@ export type RegisterUserResponse = {
     confirm_passwords: string
   }
 }
+
+export type LoginUserType = {
+  email: string;
+  password: string;
+}
+
+export type LoginUserResponse = {
+  message: string;
+  token: string;
+}

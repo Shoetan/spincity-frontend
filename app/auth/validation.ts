@@ -10,3 +10,10 @@ export const registerSchema = z.object
 })
 
 export type RegistrationSchema = z.infer<typeof registerSchema>
+
+export const loginSchema  =  z.object({
+  email: z.string().min(1,{message: "Email is required"}).email({message: "Email is required"}),
+  password: z.string().min(8,{message:"Password must be atlest 8 characters"})
+})
+
+export type LoginSchema =  z.infer<typeof loginSchema>
