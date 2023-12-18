@@ -31,7 +31,7 @@ const loginUser = async(payload:LoginUserType):Promise<LoginUserResponse> =>{
   const response = await instance.post<LoginUserResponse>("apiV1/loginUser", payload)
 
   const {data} = response
-
+  localStorage.setItem("token", data?.token)
   return data
 }
 
