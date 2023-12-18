@@ -63,10 +63,6 @@ const Page = () => {
             <Button variant="secondary" size="full" className='mb-6' onClick={ handleSubmit(onSubmit) } >
               {loginingUser ? (<Loader2 className='className="mr-2 h-4 w-4 animate-spin'/>) : ("Continue")}
             </Button>
-
-            <div className='font-poppins'>
-              <p>Already have and account? <span className='text-accent text-lg cursor-pointer hover:text-purple-400'>Sign in</span></p>
-            </div>
           </div>
 
         </div>
